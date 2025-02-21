@@ -97,6 +97,11 @@ if (!Prism.Live) {
 	}
 
 	await $.load(`https://live.prismjs.com/src/prism-live.js?load=${languages.join(",")}`);
+	// Not sure why this is necessary...
+	// I guess load doesn't wait for the script to be executed?
+	while (!Prism.Live) {
+		await new Promise(resolve => setTimeout(resolve, 100));
+	}
 	await Prism.Live.ready;
 
 	// Move Prism Live CSS before ours
