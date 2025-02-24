@@ -24,6 +24,7 @@
 
 	position: relative;
 	width: fit-content;
+	min-width: calc(var(--frame-right) * 1px + var(--frame-left) * 1px);
 	box-sizing: border-box;
 	border-radius: 4px;
 
