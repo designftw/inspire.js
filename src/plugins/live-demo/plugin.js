@@ -91,7 +91,7 @@ if (!Prism.Live) {
 	var languages = [];
 
 	for (let [id, lang] of Object.entries(prism.meta.languages)) {
-		if (id === lang.id && $(`.demo.slide .language-${id}, .language-${id} .demo.slide, .demo.slide.language-${id}`)) {
+		if (id === lang.id && $(`.demo.slide .language-${id}, .language-${id} .demo.slide, .demo.slide.language-${id}, .runnable .language-${id}`)) {
 			languages.push(id);
 		}
 	}
